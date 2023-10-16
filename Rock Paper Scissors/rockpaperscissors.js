@@ -8,7 +8,7 @@ let computerPoint = 0;
 const userInput = document.querySelector("form");
 userInput.addEventListener("submit", function (event) {
   event.preventDefault();
-  if (computerPoint >= 5 || userPoint >= 5){
+  if (computerPoint >= 5){
     alert("You have lost to the AI. Come back later loser!");
   }
   if (userPoint >= 5){
@@ -24,6 +24,17 @@ userInput.addEventListener("submit", function (event) {
   } else {
     user = 20;
   }
+
+  rock vs paper -5 paper
+  paper vs rock 5 paper
+
+  scissors vs rock 15 rock
+  scissors vs paper 10 scissors
+
+  paper vs scissors -10 scissors
+  rock vs scissors  -15 rock
+
+
 
   let computer = getRandomOutcome();
   let outcome = user - computer;
@@ -42,6 +53,12 @@ userInput.addEventListener("submit", function (event) {
     gameOutcome.textContent = `You won!`;
     gameOutcome.appendChild(img);
     userPoint++;
+  } else if (outcome == -15) {
+    let img = document.createElement("img");
+    img.setAttribute('src', './images/lose.png');
+    gameOutcome.textContent = `You lost!`;
+    gameOutcome.appendChild(img);
+    computerPoint++;
   } else if (outcome < 0) {
     let img = document.createElement("img");
     img.setAttribute('src', './images/lose.png');
