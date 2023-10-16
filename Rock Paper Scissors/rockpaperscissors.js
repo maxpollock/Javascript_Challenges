@@ -9,12 +9,10 @@ const userInput = document.querySelector("form");
 userInput.addEventListener("submit", function (event) {
   event.preventDefault();
   if (computerPoint >= 5 || userPoint >= 5){
-    alert("You have lost to the AI. Come back loser!");
-    return;
+    alert("You have lost to the AI. Come back later loser!");
   }
   if (userPoint >= 5){
     alert("You have already won and beat the AI. Go Celebrate!");
-    return;
   }
   
   let user = event.target.userInput.value;
