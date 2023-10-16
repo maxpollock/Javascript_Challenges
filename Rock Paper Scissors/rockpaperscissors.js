@@ -8,13 +8,13 @@ let computerPoint = 0;
 const userInput = document.querySelector("form");
 userInput.addEventListener("submit", function (event) {
   event.preventDefault();
-  if (computerPoint >= 5){
+  if (computerPoint >= 5) {
     alert("You have lost to the AI. Come back later loser!");
   }
-  if (userPoint >= 5){
+  if (userPoint >= 5) {
     alert("You have already won and beat the AI. Go Celebrate!");
   }
-  
+
   let user = event.target.userInput.value;
 
   if (user === "Rock") {
@@ -29,34 +29,40 @@ userInput.addEventListener("submit", function (event) {
   let outcome = user - computer;
 
   let gameOutcome = document.getElementById("gameOutcome");
-  
-  if (outcome > 0) {
+
+  if (outcome == 15) {
     let img = document.createElement("img");
-    img.setAttribute('src', './images/win.webp');
+    img.setAttribute("src", "./images/lose.png");
+    gameOutcome.textContent = `You lost!`;
+    gameOutcome.appendChild(img);
+    computerPoint++;
+  } else if (outcome > 0) {
+    let img = document.createElement("img");
+    img.setAttribute("src", "./images/win.webp");
     gameOutcome.textContent = `You won!`;
     gameOutcome.appendChild(img);
     userPoint++;
   } else if (outcome == -15) {
     let img = document.createElement("img");
-    img.setAttribute('src', './images/lose.png');
-    gameOutcome.textContent = `You lost!`;
+    img.setAttribute("src", "./images/win.webp");
+    gameOutcome.textContent = `You won!`;
     gameOutcome.appendChild(img);
-    computerPoint++;
+    userPoint++;
   } else if (outcome < -10) {
     let img = document.createElement("img");
-    img.setAttribute('src', './images/win.webp');
+    img.setAttribute("src", "./images/win.webp");
     gameOutcome.textContent = `You won!`;
     gameOutcome.appendChild(img);
     userPoint++;
   } else if (outcome < 0) {
     let img = document.createElement("img");
-    img.setAttribute('src', './images/lose.png');
+    img.setAttribute("src", "./images/lose.png");
     gameOutcome.textContent = `You lost!`;
     gameOutcome.appendChild(img);
     computerPoint++;
   } else {
     let img = document.createElement("img");
-    img.setAttribute('src', './images/drew.png');
+    img.setAttribute("src", "./images/drew.png");
     gameOutcome.textContent = `You drew!`;
     gameOutcome.appendChild(img);
   }
@@ -85,4 +91,3 @@ function getRandomOutcome() {
   }
   return parseInt(outcome);
 }
-
