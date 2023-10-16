@@ -1,0 +1,93 @@
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 248, 238);
+}
+
+header {
+  width: 100%;
+  margin: 2rem auto 0rem auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+main {
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#instructions {
+  border: 1px solid black;
+  background-color: rgb(192, 218, 209);
+  border-radius: 20px;
+  width: 35%;
+  margin: 0 auto;
+}
+
+#instructions h2 {
+  font-size: 1.2rem;
+}
+
+#inputArea {
+  margin: 4rem auto;
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: rgb(241, 244, 248);
+}
+
+#userInput {
+  width: 50%;
+  text-align: center;
+  margin: .5rem auto;
+}
+
+#gameOutcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#computerChoice {
+  width: 30%;
+  margin: 2rem auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+
+#inputArea img {
+  margin-left: .5rem;
+  width: 40px;
+}
+
+#userInput button {
+  padding: 8px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#userInput select {
+  padding: 8px 10px;
+  font-size: 1.2rem;
+  width: 50%;
+}
+
+#userInput label {
+  font-size: 1.5rem;
+  width: 80%;
+  margin-bottom: .5rem;
+}
+
+
+

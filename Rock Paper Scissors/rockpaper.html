@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <script src="./rockpaperscissors.js" defer></script>
+    <link rel="stylesheet" href="./rockpaper.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Rock, Paper, Scissors</h1>
+    </header>
+
+    <main>
+      <div id="instructions">
+        <h2>To play the game:</h2>
+        <h2>Select either Rock, Paper or Scissors.</h2>
+        <h2>
+          The computer will randomly generate one of the
+          outcomes.
+        </h2>
+        <h2>First to 5 points.</h2>
+        <h2>Good luck!</h2>
+      </div>
+
+      <div id="inputArea">
+      <form id="userInput">
+        <label for="userInput">Please choose Rock, Paper or Scissors:</label>
+        <select name="userInput" id="userInput">
+          <option value="Rock">Rock</option>
+          <option value="Paper">Paper</option>
+          <option value="Scissors">Scissors</option>
+        </select>
+        <button>Submit</button>
+      </form>
+
+      <div id="outcomes">
+        <h3 id="computerChoice"></h3>
+        <h3 id="gameOutcome"></h3>
+        <h3 id="userPoints"></h3>
+        <h3 id="computerPoints"></h3>
+      </div>
+    </div>
+    </main>
+  </body>
+</html>
